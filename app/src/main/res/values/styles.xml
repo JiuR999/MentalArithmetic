@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:app="http://schemas.android.com/apk/res-auto">
+    <style name="Custom.Indicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">#A3CBF5</item>
+    </style>
+    <style name="spinner" parent="android:Widget.Material.Spinner.Underlined">
+     <item name="popupMenuBackground">@drawable/circle_back</item>
+    </style>
+
+    <!--圆角图片样式-->
+    <style name="roundedCornerImageStyle">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">10dp</item>
+        <item name="android:radius">16dp</item>
+    </style>
+
+    <style name="Widget.Jesse205.ContextPopupMenu" parent="android:style/Widget.Material.ListPopupWindow">
+        <item name="android:overlapAnchor">true</item>
+        <item name="android:popupBackground">@drawable/popup_background_jesse205</item>
+        <item name="android:popupElevation">8dp</item>
+        <item name="android:dropDownVerticalOffset">1dp</item>
+    </style>
+    <!-- 背景变白，去除阴影 -->
+    <style name="Widget.AndroLuaX.Material3.Light.ActionBar" parent="Widget.Material3.Light.ActionBar.Solid">
+        <item name="background">?colorPrimary</item>
+        <item name="backgroundStacked">?colorSurface</item>
+        <item name="backgroundSplit">?colorSurface</item>
+        <item name="elevation">0dp</item>
+    </style>
+
+
+    <style name="popupOverflowMenu" parent="@style/Widget.MaterialComponents.PopupMenu">
+        <item name="android:popupBackground">@drawable/my_mtrl_popupmenu_background</item>
+    </style>
+
+    <style name="exerTextStyle">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="number_keyboard">
+        <item name="android:layout_width">0dp</item>dp
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_marginStart">@dimen/btn_margin</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:onClick">"numKeyClick"</item>
+        <item name="android:gravity">center</item>
+        <item name="android:stateListAnimator">@animator/btn_click</item>
+        <item name="android:background">@drawable/number_keyboard_selecter</item>
+    </style>
+    <style name="calculator_linear_style">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginTop">@dimen/edit_margin_lr</item>
+        <item name="android:layout_marginStart">@dimen/edit_margin_lr</item>
+        <item name="android:layout_marginEnd">@dimen/edit_margin_lr</item>
+    </style>
+<style name="calculator_key_style">
+    <item name="android:layout_height">80dp</item>
+    <item name="android:layout_width">80dp</item>
+    <item name="android:textColor">@color/white</item>
+    <item name="android:textSize">28sp</item>
+    <item name="android:gravity">center</item>
+    <item name="android:textStyle">bold</item>
+    <item name="android:layout_marginStart">@dimen/edit_margin_lr</item>
+    <item name="android:background">@drawable/calculator_primary_style</item>
+</style>
+    <style name="calculator_number_style">
+        <item name="android:layout_height">80dp</item>
+        <item name="android:layout_width">80dp</item>
+        <item name="android:textColor">#9A000000</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginStart">@dimen/edit_margin_lr</item>
+        <item name="android:background">@drawable/calculator_second_style</item>
+    </style>
+    <style name="exerBtnStyle">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="editAccountStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/edit_account_height</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingBottom">2dp</item>
+        <item name="android:layout_marginStart">@dimen/edit_margin_lr</item>
+        <item name="android:layout_marginEnd">@dimen/edit_margin_lr</item>
+        <item name="boxBackgroundMode">outline</item>
+        <item name="boxStrokeColor">@color/log_main</item>
+        <item name="boxCornerRadiusTopStart">@dimen/edit_account_radus</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/edit_account_radus</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/edit_account_radus</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/edit_account_radus</item>
+        <item name="endIconTint">@color/log_main</item>
+        <item name="startIconTint">@color/log_main</item>
+        <item name="hintTextColor">@color/log_main</item>
+    </style>
+</resources>

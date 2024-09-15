@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ExerciseActivity"
+    android:fitsSystemWindows="true"
+    android:background="@drawable/exam_back">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:id="@+id/linear_top">
+            <ImageView
+                android:id="@+id/img_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/time"/>
+            <TextView
+                android:id="@+id/exer_tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="XX"
+                android:textSize="22sp"
+                android:textColor="@color/md_theme_light_primary"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/linear_top"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginEnd="@dimen/margin_lr">
+                <ImageView
+                    android:id="@+id/img_exer_correct"
+                    android:layout_width="32dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/correct" />
+                <TextView
+                    android:id="@+id/exer_tv_correct"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/exerTextStyle"
+                    android:textColor="@color/log_main"
+                    android:layout_marginStart="@dimen/margin_lr"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+                <ImageView
+                    android:id="@+id/img_exer_error"
+                    android:layout_width="32dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/error" />
+                <TextView
+                    android:id="@+id/exer_tv_incorrect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_lr"
+                    style="@style/exerTextStyle"
+                    android:textColor="@color/md_theme_light_error"/>
+            </LinearLayout>
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/exer_img_allright"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_mistake"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/linear_score"
+            android:layout_marginTop="10dp"
+            android:visibility="gone">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <RelativeLayout
+            android:id="@+id/relay_exam"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/black_board">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/linear_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:padding="@dimen/edit_answer_padding">
+
+                <ImageView
+                    android:id="@+id/exer_img1"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:src="@drawable/board"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/exer_tv_cur_sum"
+                    style="@style/exerTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="1/500"
+                    android:textColor="@color/log_main"
+                    app:layout_constraintBottom_toBottomOf="@id/exer_img1"
+                    app:layout_constraintLeft_toLeftOf="@id/exer_img1"
+                    app:layout_constraintRight_toRightOf="@id/exer_img1"
+                    app:layout_constraintTop_toTopOf="@id/exer_img1" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/target"
+                    app:layout_constraintBottom_toBottomOf="@id/exer_img1"
+                    app:layout_constraintLeft_toRightOf="@id/exer_tv_cur_sum"
+                    app:layout_constraintTop_toTopOf="@id/exer_img1" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/exer_exp"
+                    style="@style/exerTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:text="2000+2000="
+                    android:textColor="@color/white" />
+
+                <EditText
+                    android:id="@+id/exer_edit_result"
+                    style="@style/exerTextStyle"
+                    android:layout_width="64dp"
+                    android:layout_height="48dp"
+                    android:autofillHints=" "
+                    android:background="@drawable/answer_edit"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/md_theme_light_outline" />
+            </LinearLayout>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_pre_question"
+                style="@style/exerTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="@dimen/margin_lr"
+                android:layout_marginTop="@dimen/margin_lr"
+                android:layout_marginEnd="@dimen/margin_lr"
+                android:stateListAnimator="@animator/btn_click"
+                android:text="@string/chip_pre_text"
+                android:textColor="@color/md_theme_light_outline"
+                android:visibility="gone"
+                app:chipCornerRadius="16dp"
+                app:chipStrokeColor="@color/md_theme_light_outline" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_next"
+                style="@style/exerTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="@dimen/margin_lr"
+                android:layout_marginEnd="@dimen/margin_lr"
+                android:backgroundTint="@color/log_main"
+                android:stateListAnimator="@animator/btn_click"
+                android:text="@string/nextQuestion"
+                app:chipCornerRadius="16dp" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/margin_lr"
+            android:layout_marginEnd="@dimen/margin_lr"
+            android:layout_marginBottom="10dp">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_print"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:stateListAnimator="@animator/btn_click"
+                android:text="@string/print_exp"
+                android:backgroundTint="#E89916"
+                style="@style/exerBtnStyle"
+                app:icon="@drawable/print"
+                app:iconTintMode="multiply"
+                app:iconSize="26dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_exer_submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:stateListAnimator="@animator/btn_click"
+                android:text="@string/submit"
+                style="@style/exerTextStyle"
+                android:layout_alignParentEnd="true"
+                android:backgroundTint="@color/log_main"
+                app:icon="@drawable/icon_submit"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_exer_reset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:stateListAnimator="@animator/btn_click"
+                android:text="@string/reset"
+                style="@style/exerBtnStyle"
+                android:layout_alignParentEnd="true"
+                android:backgroundTint="#E89916"
+                app:icon="@drawable/reset"
+                app:iconTintMode="multiply"
+                app:iconSize="26dp"
+                android:visibility="gone"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <include layout="@layout/keyboard"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

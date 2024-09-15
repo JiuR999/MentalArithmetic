@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:layout_marginStart="@dimen/activity_horizontal_margin"
+    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+    android:background="@drawable/edit_answer_focus">
+    <ImageView
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/error"
+        android:layout_centerVertical="true"/>
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       android:gravity="center"
+       android:layout_marginStart="6dp"
+       android:layout_centerVertical="true">
+
+       <TextView
+           android:id="@+id/tv_expression"
+           android:layout_width="120dp"
+           android:layout_height="50dp"
+           android:text="101000+101="
+           android:gravity="center"
+           style="@style/exerTextStyle"
+           android:textColor="@color/lavender"/>
+       <EditText
+           android:id="@+id/edit_result"
+           android:layout_width="64dp"
+           android:layout_height="48dp"
+           android:gravity="center_vertical"
+           style="@style/exerTextStyle"
+           android:textColor="@color/lavender"
+           android:autofillHints=" " />
+
+   </LinearLayout>
+</RelativeLayout>

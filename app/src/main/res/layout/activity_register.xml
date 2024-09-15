@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#CF8C4C"
+    tools:context=".activity.RegisterActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:background="@drawable/hard_study" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:orientation="vertical"
+        android:background="@drawable/circle_back"
+        android:backgroundTint="@color/white"
+        android:padding="12dp"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:gravity="center">
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/editAccountStyle"
+            android:hint="@string/input_account"
+            app:endIconMode="clear_text"
+            app:endIconTint="@color/white">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ed_reg_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="1dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/editAccountStyle"
+            android:hint="@string/input_username"
+            app:endIconMode="clear_text"
+            app:endIconTint="@color/white">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ed_reg_account"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="1dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/editAccountStyle"
+            android:hint="@string/input_password"
+            app:endIconMode="clear_text"
+            app:endIconTint="@color/white">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ed_reg_password"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="1dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/editAccountStyle"
+            android:hint="@string/check_pasword"
+            app:endIconMode="clear_text"
+            app:endIconTint="@color/white">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ed_reg_repassword"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="1dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+    <CheckBox
+        android:id="@+id/cb_agree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/agree"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/white"
+        android:backgroundTint="#D95830"
+        style="@style/Widget.AppCompat.CompoundButton.RadioButton"/>
+    <Button
+        android:id="@+id/btn_reg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:text="@string/register"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:backgroundTint="#D95830"/>
+</LinearLayout>
